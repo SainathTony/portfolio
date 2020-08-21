@@ -16,6 +16,7 @@
 			function moveTab(e){
 				marker.style.left = e.offsetLeft+"px";
 				marker.style.width = e.offsetWidth+'Px';
+				console.log(e.offsetLeft, e.offsetWidth);
 			}
 			items.forEach(item=>{
 				item.addEventListener('click', (e)=>{
@@ -26,8 +27,8 @@
 			window.addEventListener("scroll", scrollFunction);
 
 			function scrollFunction(){
-				console.log('Scrolled');
-				console.log(window.scrollY);
+				//console.log('Scrolled');
+				//console.log(window.scrollY);
 				if(window.scrollY > 400){
 					console.log('added class');
 					document.getElementById("nav_bar").classList.add('white');
@@ -274,6 +275,12 @@
 			</div>
 		</div>
 	</section>
+
+	<footer>
+		<div class="footer-content">
+			<h3>Thought Works</h3>
+		</div>
+	</footer>
 
 </body>
 </html>
