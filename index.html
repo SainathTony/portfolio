@@ -6,20 +6,9 @@
 	<link rel="stylesheet" type="text/css" media="screen" href="./css/style.css">
 		<link href='https://fonts.googleapis.com/css?family=Aldrich' rel='stylesheet'>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-			integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs="
-			crossorigin="anonymous"></script>
 
 	<script type="text/javascript" defer>
-		$(window).on('scroll', function(){
-			if($(window).scrollTop()){
-				$('header').addClass('white');
-			}else{
-				$('header').removeClass('white');
-			}
-		});
-
-		$(document).ready(function(){
+		document.addEventListener('DOMContentLoaded', function(event){
 			var marker = document.querySelector('#marker');
 			var items = document.querySelectorAll(".link_item");
 			console.log(items);
@@ -31,13 +20,26 @@
 			items.forEach(item=>{
 				item.addEventListener('click', (e)=>{
 					moveTab(e.target);
-				})
-			})
-		})
+				});
+			});
+
+			window.addEventListener("scroll", scrollFunction);
+
+			function scrollFunction(){
+				console.log('Scrolled');
+				console.log(window.scrollY);
+				if(window.scrollY > 400){
+					console.log('added class');
+					document.getElementById("nav_bar").classList.add('white');
+				}else{
+					document.getElementById("nav_bar").classList.remove('white');
+				}
+			}
+		});
 	</script>
 </head>
 <body>
-	<header>
+	<header id="nav_bar">
 		<div class="logo">
 			<img src="./images/logo.jpg" style="width: 100%; border-radius: 50%;">
 		</div>
@@ -73,7 +75,7 @@
 				<img src="./images/my_pic.jpg">
 			</div>
 			<div class="about_me">
-				<h3>Who I'm I?</h3>
+				<h3 style="color: rgb(110, 110, 250);">Who I'm I?</h3>
 				<p>I'm curently working as a intern at <a href="https://www.thoughtworks.com/" style="text-decoration: none;"><b>Thought Works</b></a></p>
 				<p>Highly passionated towards automation</p>
 				<p>I posses knowledge on <b>Data Science</b> and <b>Full Stack Development</b></p>
@@ -155,7 +157,37 @@
 
 	<section class="section" id="education">
 		<h1 class="header"><i class="fa fa-heart-o" aria-hidden="true"></i>Education</h1>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		<div class="container">
+			<div class="grid">
+				<div class="col-12 md-4">
+					<div class="card">
+						<div class="edu_img">
+							<img src="./images/school.jpeg">
+						</div>
+						<h3>SSC</h3>
+						<p>ZPHS Buruguda 2014</p>
+					</div>
+				</div>
+				<div class="col-12 md-4">
+					<div class="card">
+						<div class="edu_img">
+							<img src="./images/rgukt_gate.jpg">
+						</div>
+						<h3>Intermidiate</h3>
+						<p>RGUKT 2014 - 2016</p>
+					</div>
+				</div>
+				<div class="col-12 md-4">
+					<div class="card">
+						<div class="edu_img">
+							<img src="./images/rgukt.jpg">
+						</div>
+						<h3>B.Tech</h3>
+						<p>RGUKT 2016 - 2020</p>
+					</div>
+				</div>
+			</div>
+		</div>
 	</section>
 
 
@@ -171,29 +203,31 @@
 				<div class="content">
 					<div>
 						<h3>Qualzz</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+						<p>A web application developed to increase the online revenue for website holders.
+							Real time statistical view of user's feelings and ratings
+						</p>
 					</div>
 				</div>
 			</div>
 			<div class="card">
-				<div class="imgBox" data-text="xpid Hire">
+				<div class="imgBox" data-text="Expid Hire">
 					<img src='./images/expid.png'>
 				</div>
 				<div class="content">
 					<div>
 						<h3>Expid Hire</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+						<p>A web application developed to automate the hiring process. Increases the communication between companies and job seekers.</p>
 					</div>
 				</div>
 			</div>
 			<div class="card">
-				<div class="imgBox" data-text="Sentiment Analysys">
-					<img src='./images/sentiment.png'>
+				<div class="imgBox" data-text="Deep Agree">
+					<img src='./images/plant.png'>
 				</div>
 				<div class="content">
 					<div>
-						<h3>Sentiment Analysys</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+						<h3>Deep Agree</h3>
+						<p>A AI based web application developed to detect disease in plants and suggest suitable revention methods in user's native language</p>
 					</div>
 				</div>
 			</div>
@@ -204,7 +238,7 @@
 				<div class="content">
 					<div>
 						<h3>Games</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+						<p>Developed few games like Space War, Hungry Snake, Bubble Shooter etc.. with python.</p>
 					</div>
 				</div>
 			</div>

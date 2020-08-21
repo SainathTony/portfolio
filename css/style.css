@@ -243,6 +243,12 @@ header #marker{
 	justify-content: center;
 	align-content: center;
 }
+.card .edu_img{
+	width: 100%;
+}
+.card .edu_img img{
+	width: 100%;
+}
 .card .card_img img{
 	height: 100px;
 }
