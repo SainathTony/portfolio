@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
 	<title>Sainath Bottupally</title>
 	<link rel="stylesheet" type="text/css" media="screen" href="./css/style.css">
 		<link href='https://fonts.googleapis.com/css?family=Aldrich' rel='stylesheet'>
@@ -15,6 +15,7 @@
 
 			function moveTab(e){
 				e.classList.add('active');
+				document.getElementById('nav_items').style.display = "none";
 				items.forEach(item=>{
 					if(item != e){
 						item.classList.remove('active');
