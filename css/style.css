@@ -8,6 +8,7 @@ body{
 	font-family: 'Aldrich', sans-serif;
 	font-size: 22px;
 	font-size: 22px;
+	width: 100wh;
 	color: rgba(102, 69, 69, 0.6);
 }
 
@@ -18,6 +19,7 @@ header{
 	left: 0;
 	width: 100%;
 	padding: 10px 100px;
+	padding-left: 20px;
 	box-sizing: border-box;
 	transition: .5s;
 }
@@ -34,6 +36,12 @@ header .logo{
 	background-color: #fadfad;
 	float: left;
 }
+.menu_bar{
+	float: right;
+	color: #fff;
+	margin-top: 15px;
+	display: none;
+}
 
 header ul{
 	float: right;
@@ -41,9 +49,12 @@ header ul{
 	margin: 0;
 	padding: 0;
 	display: flex;
+	transition: .5s ease;
 }
 header ul li{
 	list-style: none;
+	transition: .5s;
+	border-radius: 5px;
 }
 
 header ul li a{
@@ -56,6 +67,17 @@ header ul li a{
 	text-decoration: none;
 	text-transform: uppercase;
 	transition: 0.5s;
+}
+
+header ul li a.active{
+	background-color: #6e0583;
+}
+
+header ul li:hover{
+	border-bottom-style: solid;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	border-bottom-color: #6e0583;
 }
 
 /* header ul li a.active,
@@ -114,7 +136,7 @@ header #marker{
   
   position:relative;
   top:100px;
-  left: calc(50% - 100px);
+  left: calc(50% - 50px);
   
   -webkit-transition:height .25s ease, width .25s ease;
   transition:height .25s ease, width .25s ease;
@@ -194,12 +216,8 @@ header #marker{
 	align-content: center;
 	justify-content: center;
 }
-.about_container .my_pic img{
+.my_pic img{
 	height: 400px;
-}
-
-.about_container .about_me{
-	width: 50%;
 }
 
 
@@ -216,79 +234,61 @@ header #marker{
 	display: flex;
 	justify-content: flex-start;
 }
-.col-1 {width: 8.33%; padding: 10px;}
-.col-2 {width: 16.66%; padding: 10px;}
-.col-3 {width: 25%; padding: 10px;}
-.col-4 {width: 33.33%; padding: 10px;}
-.col-5 {width: 41.66%; padding: 10px;}
-.col-6 {width: 50%; padding: 10px;}
-.col-7 {width: 58.33%; padding: 10px;}
-.col-8 {width: 66.66%; padding: 10px;}
-.col-9 {width: 75%; padding: 10px;}
-.col-10 {width: 83.33%; padding: 10px;}
-.col-11 {width: 91.66%; padding: 10px;}
-.col-12 {width: 100%; padding: 10px;}
 
 
-
-.card {
+.skill_card {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.5s;
-  width: 100%;
+  width: 90%;
   padding: 10px 5px;
 }
 
-.card .card_img{
+.skill_card .card_img{
 	display: flex;
 	justify-content: center;
 	align-content: center;
 }
-.card .edu_img{
+.skill_card .edu_img{
 	width: 100%;
 }
-.card .edu_img img{
-	width: 400px;
+.skill_card .edu_img img{
+	width: 100%;
 }
-.card .card_img img{
+.skill_card .card_img img{
 	height: 100px;
 }
-.card h4{
+.skill_card h4{
 	text-align: center;
 	margin: 0;
 }
 
-.card .stars{
+.skill_card .stars{
 	padding-top: 10px;
 	text-align: center;
 }
 
-.card:hover {
+.skill_card:hover {
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
   transform: translateY(-20px);
 }
 
-.project-container{
-	position: relative;
-	width: 1000px;
+
+.project_col{
 	display: flex;
-	padding-left: 50px;
-	padding-right: 50px;
-	justify-content: space-between;
-	flex-wrap: wrap;
-	margin: auto;
+	justify-content: center;
 }
 
-.project-container .card{
+.card{
 	position: relative;
 	height: 250px;
 	background: #fff;
 	display: flex;
-	width: 45%;
+	width: 60%;
 	margin: 30px 0;
-	
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 
-.project-container .card .imgBox{
+.card .imgBox{
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -303,7 +303,7 @@ header #marker{
 	transform: 0.5s ease-in-out;
 }
 
-.project-container .card:hover .imgBox{
+.card:hover .imgBox{
 	width: 150px;
 	height: 150px;
 	left: -75px;
@@ -312,7 +312,7 @@ header #marker{
 	background: rgb(62, 163, 92);;
 }
 
-.project-container .card .imgBox:before{
+.card .imgBox:before{
 	content: attr(data-text);
 	position: absolute;
 	bottom: 0;
@@ -324,16 +324,16 @@ header #marker{
 	font-weight: 700;
 }
 
-.project-container .card .imgBox img{
+.card .imgBox img{
 	position: absolute;
 	top: 30px;
 	max-width: 100px;
 	transition: 0.5s ease-in-out;
 }
-.project-container .card:hover .imgBox img{
+.card:hover .imgBox img{
 	max-width: 75px;
 }
-.project-container .card .content{
+.card .content{
 	position: absolute;
 	right: 0;
 	width: calc(100% - 110px);
@@ -344,7 +344,7 @@ header #marker{
 	align-content: center;
 }
 
-.project-container .card .content h3{
+.card .content h3{
 	margin-bottom: 5px;
 	font-size: 24px;
 	color: rgb(87, 245, 87);
@@ -371,27 +371,17 @@ header #marker{
 
 
 .contact_me{
-	padding-top: 30px;
-	display: flex;
-	justify-content: flex-start;
 	background-color: rgb(27, 20, 43);
 }
 
-.contact_me .form_box{
+.contact_me h3{
 	color: #fff;
-	width: 40%;
 }
 
-.contact_me .form_box form{
-	padding-left: 50px;
-}
-.contact_me .form_box form p{
+.contact_me p{
 	color: rgba(223, 213, 213, 0.4);
 }
 
-.contact_me .map_div{
-	width: 60%;
-}
 .social_icons{
 	padding: 10px 50px;
 }
@@ -417,4 +407,71 @@ header #marker{
 	text-align: center;
 	position: absolute;
 	bottom: 0;
+}
+
+
+
+/* Responsive Grids */
+
+.row{
+    max-width: 100wh;
+    margin: 0 auto;
+    grid-gap: 1rem;
+}
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+.col-1, .col-2,.col-3, .col-4,.col-5, .col-6,.col-7, .col-8,.col-9, .col-10,.col-11, .col-12{
+	float: left;
+	margin-bottom: 2em;
+}
+
+@media (max-width: 900px) {
+    .col-1, .col-2,.col-3, .col-4,.col-5, .col-6,.col-7, .col-8,.col-9, .col-10,.col-11, .col-12{
+        width: 100%;
+	}
+	.card{
+		width: 100%;
+		height: 400px;
+	}
+	#home .name{
+		top: calc(100% - 100px);
+	}
+	#home .name h1{
+		font-size: 20px;
+	}
+	#home .name h6{
+		font-size: 12px;
+	}
+	#my_mail{
+		font-size: 15px;
+	}
+
+	.header{
+		font-size: 50px;
+	}
+	header{
+		padding-right: 15px;
+	}
+	header ul{
+		display: none;
+	}
+	.menu_bar{
+		display: block;
+		cursor: pointer;
+	}
+	.menu_bar:hover + header ul{
+		display: block;
+	}
 }
