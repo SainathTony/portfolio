@@ -446,7 +446,7 @@ header #marker{
 		height: 400px;
 	}
 	#home .name{
-		top: calc(100% - 215px);
+		top: 400px;
 	}
 	#home .name h1{
 		font-size: 20px;
