@@ -9,13 +9,13 @@
 
 	<script type="text/javascript" defer>
 		document.addEventListener('DOMContentLoaded', function(event){
-			var marker = document.querySelector('#marker');
+			//var marker = document.querySelector('#marker');
 			var items = document.querySelectorAll(".link_item");
 			console.log(items);
 
 			function moveTab(e){
 				e.classList.add('active');
-				document.getElementById('nav_items').style.display = "none";
+				//document.getElementById('nav_items').style.display = "none";
 				items.forEach(item=>{
 					if(item != e){
 						item.classList.remove('active');
@@ -33,7 +33,7 @@
 			function scrollFunction(){
 				//console.log('Scrolled');
 				//console.log(window.scrollY);
-				if(window.scrollY > 400){
+				if(window.scrollY > 10){
 					console.log('added class');
 					document.getElementById("nav_bar").classList.add('white');
 				}else{
@@ -226,6 +226,7 @@
 								<p>A web application developed to increase the online revenue for website holders.
 									Real time statistical view of user's feelings and ratings
 								</p>
+								<a href="#"><span>View More</span></a>
 							</div>
 						</div>
 					</div>
@@ -240,6 +241,7 @@
 							<div>
 								<h3>Expid Hire</h3>
 								<p>A web application developed to automate the hiring process. Increases the communication between companies and job seekers.</p>
+								<a href="#"><span>View More</span></a>
 							</div>
 						</div>
 					</div>
@@ -256,6 +258,7 @@
 							<div>
 								<h3>Deep Agree</h3>
 								<p>A AI based web application developed to detect disease in plants and suggest suitable revention methods in user's native language</p>
+								<a href="#"><span>View More</span></a>
 							</div>
 						</div>
 					</div>
@@ -270,6 +273,7 @@
 							<div>
 								<h3>Games</h3>
 								<p>Developed few games like Space War, Hungry Snake, Bubble Shooter etc.. with python.</p>
+								<a href="https://github.com/SainathTony/Python_Progs"><span>View More</span></a>
 							</div>
 						</div>
 					</div>
@@ -283,9 +287,11 @@
 	<br><br><br><br><br><br><br><br><br><br>
 
 	<section class="section" id="contact">
-		<h1 class="header"><i class="fa fa-heart-o" aria-hidden="true"></i>Contact</h1>
+		<h1 class="header">
+			<i class="fa fa-heart-o" aria-hidden="true"></i>Contact
+		</h1>
 		<div class="row">
-			<div class="col-4 contact_me">
+			<div class="col-4 contact_me" style="height: 500px">
 				<form style="padding: 10px;">
 					<h3>Reach me at</h3>
 					<p><i class="fa fa-envelope-o" aria-hidden="true"></i>
@@ -303,19 +309,21 @@
 					<a href="https://www.linkedin.com/in/sainath-bottupally-754636156/"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
 					<a href=""><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
 					<a href=""><i class="fa fa-google-plus-square" aria-hidden="true"></i></a>
+					<a href=""><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+					<a href="https://github.com/SainathTony"><i class="fa fa-github-square" aria-hidden="true"></i></a>
 				</div>
 			</div>
 			<div class="col-8">
-				<div style="width: 100%"><iframe scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Mothuguda,%20Asifabad,%20504293,%20Telangana+(Home%20Address)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" width="100%" height="600" frameborder="0"></iframe><a href="https://www.maps.ie/route-planner.htm"></a></div>
+				<div style="width: 100%"><iframe scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=500px&amp;hl=en&amp;q=Mothuguda,%20Asifabad,%20504293,%20Telangana+(Home%20Address)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" width="100%" height="500" frameborder="0"></iframe><a href="https://www.maps.ie/route-planner.htm"></a></div>
 			</div>
 		</div>
 	</section>
-<!-- 
-	<footer>
+
+	<section id="footer-section">
 		<div class="footer-content">
 			<h3>Thought Works</h3>
 		</div>
-	</footer> -->
+	</section>
 
 </body>
 </html>
